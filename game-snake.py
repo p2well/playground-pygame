@@ -18,7 +18,7 @@ pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Snake')
 clock = pygame.time.Clock()
-font = pygame.font.SysFont('consolas', 36)
+font = pygame.font.Font('fonts/pixeltype.ttf', 50)
 
 
 def draw_rect(cell, color):
