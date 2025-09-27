@@ -5,7 +5,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('font/pixeltype.ttf', 50)
+test_font = pygame.font.Font('fonts/pixeltype.ttf', 50)
 
 sky_surf = pygame.image.load('graphics/sky.png').convert()
 ground_surf = pygame.image.load('graphics/ground.png').convert()
