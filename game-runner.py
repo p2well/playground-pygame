@@ -104,6 +104,9 @@ test_font = pygame.font.Font('fonts/pixeltype.ttf', 50)
 game_active = False
 start_time = 0
 score = 0
+bg_music = pygame.mixer.Sound('audio/music.wav')
+bg_music.set_volume(0.5)
+bg_music.play(loops=-1)
 
 # Background
 sky_surf = pygame.image.load('graphics/sky.png').convert()
