@@ -84,6 +84,14 @@ def display_score():
     return current_time
 
 
+def collision_sprite():
+    if pygame.sprite.spritecollide(player.sprite, obstacle_group, False):
+        obstacle_group.empty()
+        return False
+    else:
+        return True
+
+
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
@@ -148,12 +156,13 @@ while True:
         # Obstacles
         obstacle_group.draw(screen)
         obstacle_group.update()
+
+        # Collision
+        game_active = collision_sprite()
     else:
         # Reset game
         player.sprite.rect.midbottom = (80, 300)
         player.sprite.gravity = 0
-        obstacle_group.empty()
-        score = 0
 
         # Intro screen
         screen.fill((94, 129, 162))
